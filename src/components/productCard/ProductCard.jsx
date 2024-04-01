@@ -39,11 +39,13 @@ function ProductCard() {
                     const {title, price, category,  imageUrl ,id } = item;
                     return(
                         <>
-                        <div onClick={() => window.location.href = `/productInfo/${id}` }   key={index} className="p-4 md:w-1/4  drop-shadow-lg " >
-                                <div className="h-full border-2 hover:shadow-gray-200 hover:shadow-3xl transition-shadow duration-300 ease-in-out bg-slate-200  
-                                border-gray-400 border-opacity-60 rounded-2xl overflow-hidden" style={{ backgroundColor: mode === 'dark' ? 'rgb(46 49 55)' : '', color: mode === 'dark' ? 'white' : '', }} >
+                        <div onClick={() => window.location.href = `/productInfo/${id}` }   key={index} className="p-4 md:w-6/12 lg:w-4/12 sm:w-10/12 w-full  flex justify-around drop-shadow-lg " >
+                                <div className="h-full w-full border-2 hover:shadow-gray-200 hover:shadow-3xl
+                                transition-shadow duration-300 ease-in-out bg-slate-200  
+                                border-gray-400 border-opacity-60 rounded-2xl overflow-hidden" 
+                                style={{ backgroundColor: mode === 'dark' ? 'rgb(46 49 55)' : '', color: mode === 'dark' ? 'white' : '', }} >
                                     <div className="flex justify-center cursor-pointer" >
-                                        <img className=" rounded-2xl w-full h-80 p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={imageUrl} alt="blog" />
+                                        <img className=" rounded-2xl flex w-full max-h-72 object-cover p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={imageUrl} alt="blog" />
                                     </div>
                                     <div className="p-5 border-t-2">
                                         <h1 className="title-font text-lg font-medium text-gray-900 " style={{ color: mode === 'dark' ? 'white' : '', }}>{title}</h1>
