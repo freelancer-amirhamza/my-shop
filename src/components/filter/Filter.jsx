@@ -27,7 +27,8 @@ function Filter() {
                             name="searchKey"
                             id="searchKey"
                             placeholder="Search here"
-                            className="px-8 py-3 w-full rounded-md bg-violet-0 border border-gray-200 outline-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }} />
+                            className="px-8 py-3 w-full rounded-md bg-violet-0 border border-gray-200 outline-0 text-sm"
+                            style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }} />
                     </div>
                     <div className="flex items-center justify-between mt-4">
                         <p className="font-medium">
@@ -43,11 +44,11 @@ function Filter() {
                             value={filterType} onChange={(e) => setFilterType(e.target.value)}
                             className="px-4 py-3 w-full rounded-md bg-gray-50 border border-gray-200 outline-0 focus:border-gray-500 focus:bg-white focus:ring-0 text-sm" style={{ backgroundColor: mode === 'dark' ? 'rgb(64 66 70)' : '', color: mode === 'dark' ? 'white' : '', }}>
                                 
-                                {product.map((item, index) => {
+                                {product.map((item, id) => {
                                     return(
-                                        <>
-                                        <option key={index} value={item.category}>{item.category}</option>
-                                        </>
+                                        
+                                        <option key={id} value={item.category}>{item.category}</option>
+                                        
                                         
                                     )
                                 })}
@@ -63,7 +64,6 @@ function Filter() {
                                     )
                                 } )}
                             </select>
-
                         </div>
                     </div>
                 </div>
