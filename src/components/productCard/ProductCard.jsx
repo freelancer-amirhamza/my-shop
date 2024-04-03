@@ -12,7 +12,7 @@ function ProductCard() {
     const dispatch = useDispatch()
     
     const cartItems = useSelector((state) => state.cart);
-    console.log(cartItems)
+    // console.log(cartItems)
 
     const addCart = (product) => {
             dispatch(addToCart(product));
@@ -28,7 +28,7 @@ function ProductCard() {
             <div className="container px-5 py-8 md:py-16 mx-auto">
                 <div className="lg:w-1/2 w-full mb-6 lg:mb-10">
                     <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900" style={{ color: mode === 'dark' ? 'white' : '' }}>Our Latest Collection</h1>
-                    <div className="h-1 w-20 bg-pink-600 rounded"></div>
+                    <div className="h-1 w-20 bg-yellow-500 rounded"></div>
                 </div>
 
                 <div className="flex flex-wrap -m-4">
@@ -45,7 +45,7 @@ function ProductCard() {
                                 border-gray-400 border-opacity-60 rounded-2xl overflow-hidden" 
                                 style={{ backgroundColor: mode === 'dark' ? 'rgb(46 49 55)' : '', color: mode === 'dark' ? 'white' : '', }} >
                                     <div className="flex justify-center cursor-pointer" >
-                                        <img className=" rounded-2xl flex w-full max-h-72 object-cover p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={imageUrl} alt="blog" />
+                                        <img className=" rounded-2xl flex w-full max-h-72 h-full object-center p-4 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={imageUrl} alt="blog" />
                                     </div>
                                     <div className="p-5 border-t-2">
                                         <h1 className="title-font text-lg font-medium text-gray-900 " style={{ color: mode === 'dark' ? 'white' : '', }}>{title}</h1>

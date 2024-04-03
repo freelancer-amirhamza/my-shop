@@ -9,9 +9,9 @@ import Filter from "../../components/filter/Filter";
 
 const AllProducts = () => {
   const context = useContext(myContext)
-  const { mode, product , apiProduct, searchKey, filterType,
+  const { mode, product ,  searchKey, filterType,
       filterPrice,} = context;
-      console.log(apiProduct)
+    //   console.log(apiProduct)
 
   const dispatch = useDispatch()
   const cartItems = useSelector((state)=> state.cart);
@@ -48,11 +48,11 @@ const AllProducts = () => {
                         const { title, price,  imageUrl, category, id } = item;
                         return (
                             <>
-                            <div onClick={() => window.location.href = `/productInfo/${id}` }   key={index} className="p-4 md:w-1/4  drop-shadow-lg " >
+                            <div onClick={() => window.location.href = `/productInfo/${id}` }   key={index} className="p-4 md:w-6/12 lg:w-4/12 sm:w-10/12 w-full  flex justify-around   drop-shadow-lg " >
                                 <div className="h-full border-2 hover:shadow-gray-200 hover:shadow-3xl transition-shadow duration-300 ease-in-out bg-slate-200 
                                 border-gray-400 border-opacity-60 rounded-2xl overflow-hidden" style={{ backgroundColor: mode === 'dark' ? 'rgb(46 49 55)' : '', color: mode === 'dark' ? 'white' : '', }} >
                                     <div className="flex justify-center cursor-pointer" >
-                                        <img className=" rounded-2xl w-full h-80 p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={imageUrl} alt="blog" />
+                                        <img className=" rounded-2xl  flex w-full max-h-72 h-full object-center p-2 hover:scale-110 transition-scale-110  duration-300 ease-in-out" src={imageUrl} alt="blog" />
                                     </div>
                                     <div className="p-5 border-t-2">
                                         <h1 className="title-font text-lg font-medium text-gray-900 " style={{ color: mode === 'dark' ? 'white' : '', }}>{title}</h1>
@@ -79,8 +79,10 @@ const AllProducts = () => {
                         )
                     })}
                 </div>
-                <div className="flex flex-wrap -m-4">
-                     {/* API products  */}
+
+                
+                {/* <div className="flex flex-wrap -m-4">
+                    
                     {apiProduct.map((item, index) => {
                         const { title, price,  image, category, id } = item;
                         console.log(item)
@@ -93,7 +95,7 @@ const AllProducts = () => {
                                     </div>
                                     <div className="p-5 border-t-2">
                                         <h1 className="title-font text-lg font-medium text-gray-900 " style={{ color: mode === 'dark' ? 'white' : '', }}>{title}</h1>
-                                        {/* <p className="leading-relaxed mb-3">{item.description.}</p> */}
+                                        
                                         <div className="flex items-center justify-between py-2">
                                         <h2 className="tracking-widest text-xs title-font font-medium text-gray-400   "
                                         style={{ color: mode === 'dark' ? 'white' : '', }}> Category: <span className="text-gray-700 uppercase font-semibold">{category}</span> </h2>
@@ -114,7 +116,7 @@ const AllProducts = () => {
                             </>
                         )
                     })}
-                </div>
+                </div> */}
 
             </div>
         </section >

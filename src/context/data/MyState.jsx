@@ -196,7 +196,7 @@ const getUserData = async () => {
             setLoading(false)
         });
         setUsers(usersArray);
-        console.log(usersArray)
+        // console.log(usersArray)
         setLoading(false);
     } catch (error) {
         console.log(error)

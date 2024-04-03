@@ -24,18 +24,18 @@ const HeroSection = () => {
         disableOnInteraction:false,
       }}
       pagination={{ clickable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSwiper={(swiper) => console.log(swiper)}
     >
-      <SwiperSlide>
-        <img className='w-full h-full object-cover' src="https://iili.io/Jh0MM5F.png" alt="Amir Hamza" />
+      <SwiperSlide className='flex w-full h-full max-h-[85vh]'>
+        <img  src="https://iili.io/Jh0MM5F.png" alt="Amir Hamza" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className='flex w-full h-full max-h-[85vh]'>
         <img src="https://iili.io/JXtoXp4.png" alt="Amir Hamza" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className='flex w-full h-full max-h-[85vh]'>
         <img src="https://iili.io/JXtx7cu.png" alt="Amir Hamza" />
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide className='flex w-full h-full max-h-[85vh]'>
         <img src="https://iili.io/Jh0Vyvt.png" alt="Amir Hamza" />
       </SwiperSlide>
       
