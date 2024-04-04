@@ -1,51 +1,77 @@
-import { useContext } from "react"
-import MyContext from "../../context/data/myContext"
-import { Link } from "react-router-dom";
 
- 
+import { IoCallOutline } from 'react-icons/io5';
+import { HiOutlineMail } from 'react-icons/hi';
+import { FaFacebookF } from 'react-icons/fa';
+import { BsInstagram } from 'react-icons/bs';
+import { AiOutlineTwitter } from 'react-icons/ai';
 
 const Footer = () => {
-  const context = useContext(MyContext)
-  const {mode} = context;
   return (
-    <footer  className="text-gray-600 body-font bg-gray-300  bottom-8 "  style={{ backgroundColor: mode === 'dark' ? 'rgb(46 49 55)' : '', color: mode === 'dark' ? 'white' : '', }}>
-    <div className="bg-gray-200" style={{ backgroundColor: mode === 'dark' ? 'rgb(55 57 61)' : '', color: mode === 'dark' ? 'white' : '', }}>
-        <div className="container px-5 py-3 mx-auto flex items-center sm:flex-row flex-col">
-            <Link to={'/'} className='flex'>
-                <div className="flex ">
-                    <h1 className=' text-2xl font-bold text-black  px-2 py-1 rounded' style={{ color: mode === 'dark' ? 'white' : '', }}>My-Shop </h1>
+    <>
+      <section className='bg-[#292828] footer'>
+        <div className="container md:w-5/6 px-2 md:px-0 mx-auto w-full py-9">
+            <div className='grid md:grid-cols-4 grid-cols-1 justify-center items-center sm:grid-cols-2 gap-10 pt-8'>
+              <div className='flex flex-col'>
+                <h1 className=" w-full uppercase text-3xl text-[#ecd0c1] flex font-bold"> My Shop</h1>
+
+                <p className='text-md text-gray-300 w-10/12 flex my-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur harum nobis perspiciatis amet? </p>
+                <p className='text-md text-gray-300 md:mt-4 md:mb-10 my-4'>625 E Franklin Ave, Minneapolis, <br/>  MN 55404, USA</p>
+              </div>
+              <div>
+                <div>
+                  <h4 className='text-2xl text-white font-bold mb-6'>About us</h4>
+                  <ul  className='flex flex-col md:gap-5 gap-2'>
+                    <li><a className='text-md text-gray-300 capitalize' href="./">Our story</a></li>
+                    <li><a className='text-md text-gray-300 capitalize' href="./">designer</a></li>
+                    <li><a className='text-md text-gray-300 capitalize' href="./">craftsmanship</a></li>
+                    <li><a className='text-md text-gray-300 capitalize' href="./">sustainability</a></li>
+                  </ul>
                 </div>
-            </Link>
-            <p className="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4" style={{ color: mode === 'dark' ? 'white' : '' }}>&copy;  {new Date().getFullYear()}
-                <a href="https://amirhamzadev.com/" rel="noopener noreferrer" className="text-gray-600 ml-1" target="_blank" style={{ color: mode === 'dark' ? 'white' : '' }}>amirhamzadev.com</a>
-            </p>
-            <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-                <a className="text-gray-500">
-                    <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">
-                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
-                    </svg>
-                </a>
-                <a className="ml-3 text-gray-500">
-                    <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">
-                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
-                    </svg>
-                </a>
-                <a className="ml-3 text-gray-500">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} className="w-5 h-5" viewBox="0 0 24 24">
-                        <rect width={20} height={20} x={2} y={2} rx={5} ry={5} />
-                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01" />
-                    </svg>
-                </a>
-                <a className="ml-3 text-gray-500">
-                    <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={0} className="w-5 h-5" viewBox="0 0 24 24">
-                        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
-                        <circle cx={4} cy={4} r={2} stroke="none" />
-                    </svg>
-                </a>
-            </span>
+              </div>
+              <div>
+              <div>
+                  <h4 className='text-2xl text-white font-bold mb-6'>Support</h4>
+                  <ul  className='flex flex-col md:gap-5 gap-2'>
+                    <li><a className='text-md text-gray-300 capitalize' href="./">FAQ&apos;s</a></li>
+                    <li><a className='text-md text-gray-300 capitalize' href="./">shipping & returns</a></li>
+                    <li><a className='text-md text-gray-300 capitalize' href="./">care guide</a></li>
+                    <li><a className='text-md text-gray-300 capitalize' href="./">warranty</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div>
+              <div>
+                  <h4 className='text-2xl text-white font-bold mb-6'>Contact us</h4>
+                  <ul  className='flex flex-col md:gap-5 gap-2'>
+                    <li className='flex gap-5 text-md text-gray-300 items-center'>
+                        <span><a href="tel:+2 666327232147"> <IoCallOutline className='text-2xl'/> </a></span>
+                        <span><a href="tel:+2 666327232147">+2 666327232147</a></span>
+                    </li>
+                    <li className='flex gap-5 text-md text-gray-300 items-center'>
+                        <span><a href="mailto:amirhamza27940@gmail.com"> <HiOutlineMail className='text-2xl' /></a></span>
+                        <span><a href="mailto:amirhamza27940@gmail.com">amirhamza27940@gmail.com</a></span>
+                    </li>
+                    <li className='flex gap-5 text-md text-gray-300 items-center my-6 ml-3'>
+                        <span><a href="mailto:amirhamza27940@gmail.com"> <FaFacebookF className='text-2xl' /></a></span>
+                        <span><a href="mailto:amirhamza27940@gmail.com"><BsInstagram className='text-2xl'/> </a></span>
+                        <span><a href="mailto:amirhamza27940@gmail.com"><AiOutlineTwitter className='text-2xl'/></a></span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className=' pt-5'>
+              <p className='capitalize flex items-center text-gray-500 justify-center gap-4'>
+              <span><a href="./">Privacy policy</a></span> | 
+              <span><a href="./">term of usw</a></span> | 
+              <span><a href="./">california code</a></span>
+                </p>
+                <p className='text-md flex items-center text-gray-500 justify-center gap-4'>&copy;{new Date().getFullYear()} <a className='underline font-bold' href="https://amirhamzadev.com">Amir Hamza</a>. All rights reserved.</p>
+            </div>
         </div>
-    </div>
-</footer>
+      </section>
+      
+    </>
   )
 }
 
