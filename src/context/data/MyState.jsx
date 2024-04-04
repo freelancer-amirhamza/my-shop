@@ -184,12 +184,12 @@ const handleDeleteOrder = async (orderId) => {
 
 
 
-const [users, setUsers] = useState([]);
+const [user, setUsers] = useState([]);
 
 const getUserData = async () => {
     setLoading(true)
     try {
-        const result = await getDocs(collection(fireDB, "users"))
+        const result = await getDocs(collection(fireDB, "user"))
         const usersArray = [];
         result.forEach((doc) => {
             usersArray.push(doc.data());
@@ -209,7 +209,7 @@ useEffect(() => {
 }, []);
 const deleteUser = async (item) => {
     try {
-        await deleteDoc(doc(fireDB, "users", item.id))
+        await deleteDoc(doc(fireDB, "user", item.id))
         toast.success("Product Deleted successfully")
         getUserData();
         setLoading(false);
@@ -227,7 +227,7 @@ const [filterPrice, setFilterPrice] = useState("");
     return (
     <MyContext.Provider value={{mode, toggleMode, loading, setLoading,
         product, apiProduct, products, setProducts, addProduct, editHandle,
-        updateProduct, deleteProduct, users, orders, handleDeleteOrder,  searchKey, setSearchKey,
+        updateProduct, deleteProduct, user, orders, handleDeleteOrder,  searchKey, setSearchKey,
         filterType, setFilterType, filterPrice, setFilterPrice,deleteUser }} >
         {props.children}
     </MyContext.Provider>

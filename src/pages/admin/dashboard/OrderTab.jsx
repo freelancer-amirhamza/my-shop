@@ -62,7 +62,7 @@ const OrderTab = () => {
                                         return (
                                           <>
                                             { order.cartItems.map((item) => {
-                                              console.log(item)
+                                              // console.log(item)
                                             return(
                                               <>
                                               <tbody>

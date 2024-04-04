@@ -13,8 +13,8 @@ import OrderTab from './OrderTab';
 
 const DashboardTab = () => {
     const context = useContext(myContext)
-    const { mode, product, editHandle, deleteProduct, order, users, deleteUser } = context;
-    console.log(order)
+    const { mode, product, editHandle, deleteProduct, user, deleteUser } = context;
+    // console.log(order)
     const add = () => {
         window.location.href = "/addProduct"
     }
@@ -169,7 +169,7 @@ const DashboardTab = () => {
                                             
                                         </tr>
                                     </thead>
-                                    {users.map((item, index) => {
+                                    {user.map((item, index) => {
                                         const {email,  name} = item;
                                         return(
                                             <>

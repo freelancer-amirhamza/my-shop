@@ -23,7 +23,7 @@ function SignUp() {
         try {
             const users = await createUserWithEmailAndPassword(auth, email, password);
 
-            console.log(users)
+            // console.log(users)
 
             const user = {
                 name: name,
@@ -31,7 +31,7 @@ function SignUp() {
                 email: users.user.email,
                 time : Timestamp.now()
             }
-            const userRef = collection(fireDB, "users")
+            const userRef = collection(fireDB, "user")
             await addDoc(userRef, user);
             toast.success("Signup Succesfully")
             setName("");
